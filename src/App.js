@@ -12,8 +12,7 @@ function App() {
          {/* <HomePage/> */}
           <BrowserRouter>
         <Routes>    
-          {/* <Router basename={process.env.PUBLIC_URL}></Router> */}
-          <Route basename={process.env.PUBLIC_URL} path="/" exact="true" element={user && user._id ? <HomePage setLoginUser={setLoginUser} /> : <Login setLoginUser={setLoginUser} />      }></Route>
+          <Route  path="/" exact="true" element={user && user._id ? <HomePage setLoginUser={setLoginUser} /> : <Login setLoginUser={setLoginUser} />      }></Route>
           <Route path="/login" element={<Login setLoginUser={setLoginUser} />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/users-record" element={<Records/>}></Route>
