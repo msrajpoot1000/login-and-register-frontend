@@ -14,8 +14,8 @@ function App() {
         <Routes>    
           <Route  path="/" exact="true" element={user && user._id ? <HomePage setLoginUser={setLoginUser} /> : <Login setLoginUser={setLoginUser} />      }></Route>
           <Route path="/login" element={<Login setLoginUser={setLoginUser} />}></Route>
-          <Route path="/register" element={<Register />}></Route>
-          <Route path="/users-record" element={<Records/>}></Route>
+          <Route path="/register" exact="true"  element={<Register />}></Route>
+          <Route path="/users-record" exact="true"  element={<Records/>}></Route>
           </Routes>
       </BrowserRouter>
 
